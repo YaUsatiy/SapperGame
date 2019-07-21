@@ -30,12 +30,12 @@ public class JavaSapper extends JFrame {
         else if (AuxiliaryWindow.medium){
             COLS = 13;
             ROWS = 13;
-            BOMBS = 35;
+            BOMBS = 18;
         }
         else{
             COLS = 16;
             ROWS = 16;
-            BOMBS = 52;
+            BOMBS = 27;
         }
 
         game = new Game(COLS, ROWS, BOMBS);
@@ -87,7 +87,7 @@ public class JavaSapper extends JFrame {
         switch (game.getState()){
             case PLAYED : return "Think twice! There are " + game.bombsLeft + " bombs left!";
             case BOMBED : return "Game Over! Press left mouse button to regame!";
-            case WINNER : return "Congratulations! You're winner!";
+            case WINNER : return "Congratulations! You're winner! Press left mouse button to regame!";
             default     : return "Utopia";
         }
     }
